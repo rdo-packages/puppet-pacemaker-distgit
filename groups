@@ -1,5 +1,5 @@
-# UUID          Group Name
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
-108565d08efc40e6eb88e4183bd1b6f88a81819e       	puppet-pacemaker-distgit-core
-7a00d8eac25594c58e8f074b32278b8430d961fe        	puppet-pacemaker-distgit-ptl
-global:Registered-Users		Registered Users
+# UUID                                  	Group Name
+#
+108565d08efc40e6eb88e4183bd1b6f88a81819e	puppet-pacemaker-distgit-core
+7a00d8eac25594c58e8f074b32278b8430d961fe	puppet/puppet-pacemaker-distgit-ptl
+global:Registered-Users                 	Registered Users
