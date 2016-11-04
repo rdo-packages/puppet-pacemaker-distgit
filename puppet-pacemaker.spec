@@ -7,8 +7,8 @@
 
 
 Name:           puppet-pacemaker
-Version:        0.0.1
-Release:        0.1%{?alphatag}%{?dist}
+Version:        0.3.0
+Release:        0.2%{?alphatag}%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        Apache-2.0
 
@@ -50,6 +50,9 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 
 %changelog
+* Fri Nov 04 2016 Jon Schlueter <jschluet@redhat.com> 0.3.0-0.2
+- syncing version number with metadata.json
+
 * Thu Sep 22 2016 Haikel Guemar <hguemar@fedoraproject.org> - 0.0.1-0.1.87968ef.git
 - Newton update 0.0.1 (87968ef1e717a33dd959ed089978b1abe9ca3e74)
 
