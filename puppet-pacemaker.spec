@@ -7,7 +7,7 @@
 
 
 Name:           puppet-pacemaker
-Version:        0.3.0
+Version:        0.4.0
 Release:        0.1%{?alphatag}%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        Apache-2.0
@@ -50,6 +50,9 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 
 %changelog
+* Fri Nov 04 2016 Alex Schultz <aschultz@redhat.com> 0.4.0-0.1
+- First actual tag from upstream
+
 * Fri Nov 04 2016 Jon Schlueter <jschluet@redhat.com> 0.3.0-0.1
 - syncing version number with metadata.json
 
