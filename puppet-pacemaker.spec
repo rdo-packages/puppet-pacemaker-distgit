@@ -10,7 +10,7 @@ Name:           puppet-pacemaker
 Version:        XXX
 Release:        XXX
 Summary:        Puppet module for Pacemaker
-License:        Apache-2.0
+License:        ASL 2.0
 
 URL:            https://github.com/redhat-openstack/puppet-pacemaker
 
