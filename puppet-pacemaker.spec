@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name puppet-pacemaker
-%global commit 87968ef1e717a33dd959ed089978b1abe9ca3e74
+%global commit 28020de0fb5699104057eed7a96d106bc396c9a2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-pacemaker
-Version:        XXX
-Release:        XXX
+Version:        0.4.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        ASL 2.0
 
@@ -50,4 +50,6 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 
 %changelog
+* Thu Feb 09 2017 Alfredo Moralejo <amoralej@redhat.com> 0.4.0-1.28020degit
+- Ocata update 0.4.0 (28020de0fb5699104057eed7a96d106bc396c9a2)
 
