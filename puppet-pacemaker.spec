@@ -51,3 +51,4 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 %changelog
 
+
