@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name puppet-pacemaker
-%global commit 87968ef1e717a33dd959ed089978b1abe9ca3e74
+%global commit e0f9c4253abce26de340a8c8256c87f5c9f27e02
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-pacemaker
-Version:        XXX
-Release:        XXX
+Version:        0.6.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        ASL 2.0
 
@@ -50,5 +50,8 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 
 %changelog
+* Sat Aug 26 2017 Haïkel Guémar <hguemar@fedoraproject.org> - 0.6.0-1.e0f9c425git
+- Pike update 0.6.0 (e0f9c4253abce26de340a8c8256c87f5c9f27e02)
+
 
 
