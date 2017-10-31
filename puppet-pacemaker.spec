@@ -1,5 +1,9 @@
 %{!?upstream_version: %global upstream_version %{commit}}
+%if 0%{?dlrn}
+%define upstream_name openstack-pacemaker
+%else
 %define upstream_name puppet-pacemaker
+%endif
 %global commit e0f9c4253abce26de340a8c8256c87f5c9f27e02
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
@@ -26,7 +30,7 @@ Requires:       puppet >= 2.7.0
 Puppet module for Pacemaker
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
