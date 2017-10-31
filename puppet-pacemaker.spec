@@ -1,5 +1,9 @@
 %{!?upstream_version: %global upstream_version %{commit}}
+%if 0%{?dlrn}
+%define upstream_name openstack-pacemaker
+%else
 %define upstream_name puppet-pacemaker
+%endif
 %global commit e0f9c4253abce26de340a8c8256c87f5c9f27e02
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
