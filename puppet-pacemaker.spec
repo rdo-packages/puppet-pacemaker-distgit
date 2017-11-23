@@ -59,3 +59,4 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 * Thu Feb 09 2017 Alfredo Moralejo <amoralej@redhat.com> 0.4.0-1.28020degit
 - Ocata update 0.4.0 (28020de0fb5699104057eed7a96d106bc396c9a2)
 
+# REMOVEME: error caused by commit https://github.com/openstack/puppet-pacemaker/commit/1b7b9e99498dbdeaf722054d4d16a3b19e48d6ee
