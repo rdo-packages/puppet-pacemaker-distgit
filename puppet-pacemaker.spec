@@ -55,3 +55,4 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 - Newton update 0.0.1 (87968ef1e717a33dd959ed089978b1abe9ca3e74)
 
 
+# REMOVEME: error caused by commit https://github.com/openstack/puppet-pacemaker/commit/1b7b9e99498dbdeaf722054d4d16a3b19e48d6ee
