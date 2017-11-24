@@ -1,5 +1,7 @@
 %{!?upstream_version: %global upstream_version %{version}}
-%define upstream_name puppet-pacemaker
+%{?dlrn: %global tarsources openstack-pacemaker}
+%{!?dlrn: %global tarsources %{name}}
+
 
 Name:           puppet-pacemaker
 Version:        0.4.0
@@ -7,7 +9,7 @@ Release:        0.1%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        Apache-2.0
 
-URL:            https://github.com/redhat-openstack/puppet-pacemaker
+URL:            https://github.com/openstack/puppet-pacemaker
 
 Source0:        https://github.com/openstack/%{name}/archive/%{version}.tar.gz
 
@@ -21,7 +23,7 @@ Requires:       puppet >= 2.7.0
 Puppet module for Pacemaker
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%setup -q -n %{tarsources}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
@@ -53,5 +55,3 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 * Thu Sep 22 2016 Haikel Guemar <hguemar@fedoraproject.org> - 0.0.1-0.1.87968ef.git
 - Newton update 0.0.1 (87968ef1e717a33dd959ed089978b1abe9ca3e74)
-
-
