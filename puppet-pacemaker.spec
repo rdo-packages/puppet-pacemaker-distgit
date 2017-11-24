@@ -5,6 +5,8 @@
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
+%{?dlrn: %global tarsources openstack-pacemaker}
+%{!?dlrn: %global tarsources %{name}}
 
 Name:           puppet-pacemaker
 Version:        0.5.0
@@ -12,9 +14,9 @@ Release:        2%{?alphatag}%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        ASL 2.0
 
-URL:            https://github.com/redhat-openstack/puppet-pacemaker
+URL:            https://github.com/openstack/puppet-pacemaker
 
-Source0:        https://github.com/openstack/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
+Source0:        https://github.com/openstack/%{name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
@@ -26,7 +28,7 @@ Requires:       puppet >= 2.7.0
 Puppet module for Pacemaker
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%setup -q -n %{tarsources}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
