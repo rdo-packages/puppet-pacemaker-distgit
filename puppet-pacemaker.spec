@@ -1,8 +1,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           puppet-pacemaker
-Version:        XXX
-Release:        XXX
+Version:        0.7.1
+Release:        1%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        ASL 2.0
 
@@ -44,5 +44,8 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 
 %changelog
+* Thu Feb 22 2018 RDO <dev@lists.rdoproject.org> 0.7.1-1
+- Update to 0.7.1
+
 
 
