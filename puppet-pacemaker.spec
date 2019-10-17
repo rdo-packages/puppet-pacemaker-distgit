@@ -1,14 +1,22 @@
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{!?upstream_version: %global upstream_version %{commit}}
+%define upstream_name puppet-pacemaker
+%global commit a09f5dd75bb0ee0605b013b2c604dd64e259e948
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
+%{?dlrn: %global tarsources openstack-pacemaker}
+%{!?dlrn: %global tarsources %{name}}
 
 Name:           puppet-pacemaker
-Version:        XXX
-Release:        XXX
+Version:        0.7.2
+Release:        2%{?alphatag}%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        ASL 2.0
 
 URL:            https://github.com/openstack/puppet-pacemaker
 
-Source0:        https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
+Source0:        https://github.com/openstack/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
@@ -20,7 +28,7 @@ Requires:       puppet >= 2.7.0
 Puppet module for Pacemaker
 
 %prep
-%setup -q -n openstack-pacemaker-%{upstream_version}
+%setup -q -n %{tarsources}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
@@ -44,5 +52,6 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 
 %changelog
-
+* Thu Oct 17 2019 RDO <dev@lists.rdoproject.org> 0.7.2-2.a09f5dd7git
+- Update to post 0.7.2 (a09f5dd75bb0ee0605b013b2c604dd64e259e948)
 
