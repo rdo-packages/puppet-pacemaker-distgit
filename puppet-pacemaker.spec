@@ -9,8 +9,8 @@
 %{!?dlrn: %global tarsources %{name}}
 
 Name:           puppet-pacemaker
-Version:        0.7.2
-Release:        2%{?alphatag}%{?dist}
+Version:        0.8.0
+Release:        1%{?alphatag}%{?dist}
 Summary:        Puppet module for Pacemaker
 License:        ASL 2.0
 
@@ -52,6 +52,9 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 
 
 %changelog
+* Wed Oct 23 2019 RDO <dev@lists.rdoproject.org> 0.8.0-1.a09f5ddgit
+- Update to 0.8.0
+
 * Thu Oct 17 2019 RDO <dev@lists.rdoproject.org> 0.7.2-2.a09f5dd7git
 - Update to post 0.7.2 (a09f5dd75bb0ee0605b013b2c604dd64e259e948)
 
