@@ -50,3 +50,4 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/pacemaker/
 * Thu Oct 17 2019 RDO <dev@lists.rdoproject.org> 0.7.2-2.a09f5dd7git
 - Update to post 0.7.2 (a09f5dd75bb0ee0605b013b2c604dd64e259e948)
 
+
