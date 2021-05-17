@@ -29,6 +29,10 @@ Requires:       puppet-stdlib
 Requires:       puppet-firewall
 Requires:       puppet >= 2.7.0
 
+%if 0%{?rhel} > 8
+Requires:       rubygem-rexml
+%endif
+
 %description
 Puppet module for Pacemaker
 
